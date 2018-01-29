@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     EditText input;
     ImageView click_to_speak;
     TextView show;
-//    ListView listview ;
+    //ListView listview ;
 
 
     @Override
@@ -46,14 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         input = (EditText) findViewById(R.id.editText);
-       show = (TextView) findViewById(R.id.show);
-//        listview=(ListView)findViewById(R.id.list);
-
+        show = (TextView) findViewById(R.id.show);
+       // listview=(ListView)findViewById(R.id.list);
         click_to_speak = (ImageView) findViewById(R.id.imageView);
-        mSpeechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,
-                Locale.getDefault());
 
+
+        mSpeechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"ar-EG");
+        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
 
         click_to_speak.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -116,17 +117,14 @@ public class MainActivity extends AppCompatActivity {
 
                 ArrayList<String> matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
 
-
-
-
                 if (matches != null) {
 
                     input.setText(matches.get(0));
-                  show.append(matches.get(0) + "\n");
+                 show.append(matches.get(0) + "\n");
 
 //
 //                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
-//                            android.R.layout.simple_list_item_1,matches2);
+//                            android.R.layout.simple_list_item_1,matches);
 //
 //                    listview.setAdapter(arrayAdapter);
 //
