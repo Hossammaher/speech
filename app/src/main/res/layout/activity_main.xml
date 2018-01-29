@@ -20,37 +20,34 @@
         android:hint="input show here"
         />
 
+ <!--<ListView-->
+     <!--android:layout_below="@+id/editText"-->
+     <!--android:id="@+id/list"-->
+     <!--android:layout_width="match_parent"-->
+     <!--android:layout_height="350dp"-->
+    <!--android:background="#d2abab"-->
+
+     <!--&gt;-->
+ <!--</ListView>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show"
+            android:textSize="20dp"
+            android:textColor="#4ad3f5"
+
+            />
 
 
-
- <ListView
-     android:layout_below="@+id/editText"
-     android:id="@+id/list"
-     android:layout_width="match_parent"
-     android:layout_height="350dp"
-    android:background="#d2abab"
-
-     >
- </ListView>
-
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1"-->
-        <!--&gt;-->
-
-        <!--<TextView-->
-            <!--android:layout_marginLeft="20dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/show"-->
-            <!--android:textSize="20dp"-->
-            <!--android:textColor="#4ad3f5"-->
-
-            <!--/>-->
-
-
-    <!--</ScrollView>-->
+    </ScrollView>
 
 
     <ImageView
