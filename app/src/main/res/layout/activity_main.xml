@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+ android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hossam1.speechrecognition.MainActivity">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="input show here"
+        />
+
+
+
+
+ <ListView
+     android:layout_below="@+id/editText"
+     android:id="@+id/list"
+     android:layout_width="match_parent"
+     android:layout_height="350dp"
+    android:background="#d2abab"
+
+     >
+ </ListView>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/show"-->
+            <!--android:textSize="20dp"-->
+            <!--android:textColor="#4ad3f5"-->
+
+            <!--/>-->
+
+
+    <!--</ScrollView>-->
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@android:drawable/ic_btn_speak_now" />
+</LinearLayout>
