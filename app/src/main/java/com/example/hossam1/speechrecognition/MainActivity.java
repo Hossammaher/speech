@@ -15,6 +15,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -23,6 +24,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -49,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         show = (TextView) findViewById(R.id.show);
        // listview=(ListView)findViewById(R.id.list);
         click_to_speak = (ImageView) findViewById(R.id.imageView);
-
 
         mSpeechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"ar-EG");
@@ -120,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
                 if (matches != null) {
 
                     input.setText(matches.get(0));
-                 show.append(matches.get(0) + "\n");
+                    tojson();
+                    show.append(matches.get(0) + "\n");
 
 //
 //                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
@@ -143,6 +147,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
     }
 
 
@@ -165,6 +173,22 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Permission DENIED", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    private void tojson (){
+
+        // get the text from edittext and convert to json
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("command",input.getText());
+            Log.i("jsonobject",jsonObject.toString());
+            Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
