@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/speech.iml" filepath="$PROJECT_DIR$/speech.iml" />
       <module fileurl="file://$PROJECT_DIR$/speechrecognition.iml" filepath="$PROJECT_DIR$/speechrecognition.iml" />
     </modules>
   </component>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "133243689978",
+    "firebase_url": "https://speech-cd609.firebaseio.com",
+    "project_id": "speech-cd609",
+    "storage_bucket": "speech-cd609.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133243689978:android:be5b47527cf8b6d4",
+        "android_client_info": {
+          "package_name": "com.example.hossam1.speechrecognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133243689978-ddsij7a15tj0q3ehdca3v5hvj6useklj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hossam1.speechrecognition",
+            "certificate_hash": "cabedb704e5dbc96ccc1761c229d72752063d647"
+          }
+        },
+        {
+          "client_id": "133243689978-58oaitfva851iti2n0rbr71agofiet38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVKGR4pXolWooxPOVdl_O2BcwaT_oE6cA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133243689978-58oaitfva851iti2n0rbr71agofiet38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
