@@ -23,17 +23,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-<<<<<<< HEAD
+
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-=======
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Array;
->>>>>>> 077f180f1017a4cc38dc3724994b3a8bd8c477c2
+
 import java.util.ArrayList;
 
 
@@ -140,17 +140,12 @@ public class MainActivity extends AppCompatActivity {
                 if (matches != null) {
 
                     input.setText(matches.get(0));
-<<<<<<< HEAD
+
                     show.append(matches.get(0) + "\n");
                     Sent.add(matches.get(0));
-=======
+
                     tojson();
                     show.append(matches.get(0) + "\n");
-
->>>>>>> 077f180f1017a4cc38dc3724994b3a8bd8c477c2
-//
-//
-//
 
                 }
 
@@ -194,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD
+
     void save(View view) {
         for (int i = 0; i < Sent.size(); i++) {
             System.out.println(Sent.get(i) + Label);
@@ -205,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
         Sent.clear();
         show.setText("");
     }
-=======
+
     private void tojson (){
 
         // get the text from edittext and convert to json
@@ -222,7 +217,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
->>>>>>> 077f180f1017a4cc38dc3724994b3a8bd8c477c2
 
     void reset(View view) {
         Sent.clear();
