@@ -1,10 +1,8 @@
 package com.example.hossam1.speechrecognition;
 
 import android.Manifest;
-
 import android.content.Intent;
 import android.content.pm.PackageManager;
-
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
@@ -15,7 +13,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -23,16 +20,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.lang.reflect.Array;
 
 import java.util.ArrayList;
 
@@ -45,10 +37,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView click_to_speak;
     TextView show;
     Button btn_save, btn_reset;
-    //ListView listview ;
     private DatabaseReference mDatabase;
     ArrayList<String> Sent;
-    String Label,txt;
+    String Label, txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Sent = new ArrayList<String>();
         Intent data = getIntent();
         Label = data.getStringExtra("label");
-        txt =data.getStringExtra("Name");
+        txt = data.getStringExtra("Name");
         TextView t = findViewById(R.id.tex);
         t.setText(txt);
         input = (EditText) findViewById(R.id.editText);
@@ -163,8 +154,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
 
@@ -190,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    void save(View view) {
+    public void save(View view) {
         for (int i = 0; i < Sent.size(); i++) {
             System.out.println(Sent.get(i) + Label);
             String id = mDatabase.push().getKey();
@@ -201,14 +190,14 @@ public class MainActivity extends AppCompatActivity {
         show.setText("");
     }
 
-    private void tojson (){
+    private void tojson() {
 
         // get the text from edittext and convert to json
 
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("command",input.getText());
-            Log.i("jsonobject",jsonObject.toString());
+            jsonObject.put("command", input.getText());
+            Log.i("jsonobject", jsonObject.toString());
             Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
 
         } catch (JSONException e) {
@@ -218,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    void reset(View view) {
+    public void reset(View view) {
         Sent.clear();
         show.setText("");
     }

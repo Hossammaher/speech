@@ -22,10 +22,10 @@ public class Main2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         radioSexGroup = (RadioGroup) findViewById(R.id.g1);
         radioSexGroup2 = (RadioGroup) findViewById(R.id.g2);
-        btn = (Button) findViewById(R.id.Go);
+       // btn = (Button) findViewById(R.id.Go);
     }
 
-    void go(View view) {
+   public void GO(View view) {
         String d[] = {"الباب", "الشباك", "الانوار", "التكييف","السخان",  "البوتجاز" };
         int Select1 = radioSexGroup.getCheckedRadioButtonId();
         int Select2 = radioSexGroup2.getCheckedRadioButtonId();
