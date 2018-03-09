@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hossam1.speechrecognition.Main2">
+
+    <RadioGroup
+        android:id="@+id/g1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_green_light"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/door"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foregroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:text="الباب"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="الشباك"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="الانوار"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/air"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="التكييف"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="السخان"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/sa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="البوتجاز"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/g2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".15"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="افتح"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="اغلق"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Go"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".15"
+        android:onClick="GO"
+        android:text="GO" />
+</LinearLayout>
